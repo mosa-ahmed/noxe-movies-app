@@ -10,10 +10,10 @@ import Profile from "./Components/Profile/Profile"
 import People from "./Components/People/People"
 import TvShows from "./Components/TvShows/TvShows"
 import MovieDetails from "./Components/MovieDetails/MovieDetails"
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import { RouterProvider, createHashRouter } from "react-router-dom"
 import UserContextProvider from "./Context/UserContext"
 
-const routers = createBrowserRouter([
+const routers = createHashRouter([
   {path:'', element:<Layout/>, children:[
     {index:true, element:<ProtectedRoute><Home/></ProtectedRoute>},
     {path:'/profile', element:<ProtectedRoute><Profile/></ProtectedRoute>},
